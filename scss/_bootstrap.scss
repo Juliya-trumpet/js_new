@@ -1,0 +1,23 @@
+.vector {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $gray-dark-color;
+    position: relative;
+    margin: 51px 0 65px;
+}
+
+.vector::after {
+    content: url(./img/icons/vector.jpg);
+    line-height: 0px;
+    position: absolute;
+    height: 1px;
+    top: 11px;
+}
+
+.sort {
+    text-transform: uppercase;
+    margin: 51px 0 65px;
+}

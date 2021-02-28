@@ -1,0 +1,92 @@
+.stock__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 64px 0 0;
+    margin-bottom: 0 0 98px;
+   
+    // @include tablet {
+    //     padding: 19px 0 155px;
+    // }
+    .stock__item {
+        width: 32%;
+        min-height: 360px;  
+        text-align: center;
+        background-size: cover;
+
+        // @include tablet {
+        //     min-height: 168px;
+        // }
+
+        // @include mobile {
+        //     width: 100%;
+        // }
+        &--woman {
+            background-image: url(../img/stock-img-1.jpg);
+            background-repeat: no-repeat;
+        }
+        &--man {
+            background-image: url(../img/stock-img-2.jpg);
+            background-repeat: no-repeat;
+        }    
+        &--kid {
+            background-image: url(../img/stock-img-3.jpg);
+            background-repeat: no-repeat;
+        }
+
+        &--shoes {
+            background-image: url(../img/stock-img-4.jpg);
+            background-repeat: no-repeat;
+            margin-top: 30px;
+            width: 100%;
+            min-height: 180px;
+            @include mobileL {
+                width: 100%;
+                margin: 32px 0 0 0;
+                min-height: 111px;
+            }
+        }
+    .stock__heading {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        color: $white-color;
+        text-transform: uppercase;
+        padding: 105px 0 0 0;
+    }
+    .stock__text {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 29px;
+        color: $pink-dark-color;
+        text-transform: uppercase;
+        padding: 0 0 105px 0;
+    }
+    .stock__heading--two {
+        padding: 65px 0 0 0;
+    }
+    .stock__text--two {
+        padding: 0 0 65px 0;
+    }
+}
+}
+@media (max-width: $tablet-width) {
+    .stock__list {
+      padding: 20px 0 0 0;
+    }
+    .stock__item {
+        min-height: 168px;
+      }
+  }
+  
+  @media (max-width: $mobileL-width) {
+    .stock__list {
+    justify-content: center;
+    }
+    .stock__item {
+        width: 100%;
+        margin: 32px 0 0 0;
+      }
+  }

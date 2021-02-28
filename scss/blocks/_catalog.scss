@@ -1,0 +1,27 @@
+.wrp-catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    grid-row-gap: 10px;
+}
+
+.filter {
+    position: relative;
+}
+
+.filter-list {
+    position: absolute;
+    display: none;
+    width: 360px;
+}
+
+.filter:hover.filter-list {
+    display: block;
+}
+
+@media (max-width: $tablet-width) {
+    .wrp-catalog {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 16px;
+    }
+}

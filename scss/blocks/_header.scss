@@ -1,0 +1,103 @@
+    .header {
+        background-color: $black-color;
+        
+        &__icon {
+            fill: $gray-color;
+        }
+    .header__wrapper {
+        min-height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .header__wrapper_logo {
+        display: flex;
+        align-items: center;
+    }
+    .logo-img {
+        margin: 0 41px 0 0;
+    }
+    .header__list {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+    @media (max-width: 635px) {
+        .header__list {
+        flex-direction: row-reverse;
+        }
+      }
+    .header__navigation {
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 75px;
+        min-width: 232px;
+        min-height: 747px;
+        background: $white-color;
+        border: none;
+        padding: 17px 17px 0 34px;
+    }
+    .header__navigation_close {
+        margin: 0 0 0 210px;
+        background: transparent;
+        color: $gray-color;
+      }
+      
+      .header__navigation_close:hover {
+        color: $pink-dark-color;
+        cursor: pointer;
+      }
+    .header__navigation_heading {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+        font-style: normal;
+        color: $black-color;
+        text-transform: uppercase;
+    }
+    .list__heading {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 400;
+        font-style: normal;
+        color: $pink-dark-color;
+        text-transform: uppercase;
+        margin: 24px 0 12px 0;
+        text-decoration: none;
+    }
+    .list__heading_item {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 400;
+        font-style: normal;
+        color: $gray-midle-color;
+        margin: 0 0 11px 22px;
+        display: block;
+    }
+    .list__heading_item:hover {
+        color: $pink-dark-color;
+    }
+    .list__link {
+        text-decoration: none;
+    }
+    .header__list_button {
+        background-color: transparent;
+        fill: $pink-dark-color;
+        border: none;
+        margin: 0 0 0 33px;
+
+        .header__list_button_burger:hover + .header__navigation {
+            display: block;
+        }
+        
+    }
+}
+@media (max-width: $mobile-width) {
+    .mobile-hide { 
+        display: none;
+    }
+}
+   

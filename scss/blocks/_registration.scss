@@ -1,0 +1,103 @@
+.reg-bar {
+    background: $pink-color;
+    min-height: 148px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reg-bar__text {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: $pink-dark-color;
+    margin-left: 14%;
+}
+
+.reg {
+    display: flex;
+    justify-content: space-between;
+    min-height: 675px;
+    background-color: #fff;
+}
+
+.reg__form {
+    padding-right: 125px;
+}
+
+.reg__title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 39px;
+}
+
+.reg-form__advantages {
+    position: relative;
+}
+
+.reg-form__heading {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    padding-bottom: 22px;
+    text-transform: uppercase;
+    color: $black-color;
+}
+
+.reg-form__text {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    padding-bottom: 21px;
+    color: $black-color;
+}
+
+.reg-form__text-second {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    color: #B1B1B1;
+}
+
+.reg__radio {
+    display: flex;
+    padding: 31px 0 33px 0;
+}
+
+.list__item {
+    position: relative;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 29px;
+    padding-bottom: 16px;
+    color: $black-color;
+}
+
+.list__item::before {
+    top: 5px;
+    left: -42px;
+    content: url('../img/done.svg');
+    position: absolute;
+}
+
+@media (max-width: $tablet-width) {
+    .reg-form__heading {
+        font-size: 16px;
+        line-height: 19.2px;
+        padding-bottom: 32px;
+    }
+
+    .reg-form__text {
+        font-size: 16px;
+        line-height: 19.2px;
+        padding-bottom: 21px;
+    }
+
+}
