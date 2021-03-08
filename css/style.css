@@ -1008,4 +1008,38 @@ table {
     grid-column-gap: 16px;
   }
 }
+
+.order {
+  display: flex;
+}
+
+.cart-cards {
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 96px 0 40px;
+}
+
+.cart-cards__wide {
+  border: solid 1px blue;
+  display: flex;
+}
+
+.supply {
+  width: 50%;
+  flex-direction: column;
+  padding: 96px 0 40px;
+  margin: 0 0 0 100px;
+}
+
+.title-cart {
+  padding-bottom: 42px;
+}
+
+.cart-cards__list {
+  width: 262px;
+  height: 222px;
+  float: left;
+  padding: 22px 97px 62px 31px;
+}
 /*# sourceMappingURL=style.css.map */
