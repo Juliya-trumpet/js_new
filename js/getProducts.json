@@ -1,0 +1,46 @@
+[
+  {
+    "id_product": 1,
+    "title": "Рюкзак",
+    "price": 1600,
+    "img": "./img/first.jpg",
+    "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery"
+
+  },
+  {
+    "id_product": 2,
+    "title": "Туфли",
+    "price": 3000,
+    "img": "./img/sec.jpg",
+    "description": "none"
+  },
+  {
+    "id_product": 3,
+    "title": "Панама",
+    "price": 1600,
+    "img": "./img/third.jpg",
+    "description": "Описание панамы"
+  },
+  {
+    "id_product": 4,
+    "title": "Туфли",
+    "price": 3000,
+    "img": "./img/fourth.jpg",
+    "description": "none"
+  },
+  {
+    "id_product": 5,
+    "title": "Рюкзак",
+    "price": 1600,
+    "img": "./img/fifth.jpg",
+    "description": "none"
+
+  },
+  {
+    "id_product": 6,
+    "title": "Туфли",
+    "price": 3000,
+    "img": "./img/sixth.jpg",
+    "description": "none"
+  }
+]
