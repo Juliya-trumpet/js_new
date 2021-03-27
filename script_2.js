@@ -1,3 +1,22 @@
+function makeGETRequest(url, callback) {
+  var xhr;
+
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      callback(xhr.responseText);
+    }
+  }
+
+  xhr.open('GET', url, true);
+  xhr.send();
+}
+const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 class GoodsItem {
   constructor(id, title, price, image, description) {
@@ -17,11 +36,6 @@ class GoodsItem {
           <div class="overlay"></div>
           <button type="button" class="featured__button">Add to Cart</button>
       </li>`;
-  }
-}
-class CartGoodsItem extends GoodsItem {
-  plusGood() {
-    this.price++;
   }
 }
 class GoodsList {
@@ -56,6 +70,25 @@ class GoodsList {
 const list = new GoodsList();
 list.fetchGoods();
 list.render();
+
+class CartGoodsItem extends GoodsItem {
+  constructor(quantity, color, size) {
+    this.quantity = quantity;
+    this.color = color;
+    this.size = size;
+
+  }
+  render() {
+    return `<ul class="cart-cards__list">
+    <h3 class="title-cart">MANGO  PEOPLE  T-SHIRT</h3>
+    <li>${this.price}</li>
+    <li>${this.color}</li>
+    <li>${this.size}</li>
+    <li>quantity</li>
+</ul>`;
+  }
+
+}
 
 
 
