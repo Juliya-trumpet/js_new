@@ -1,25 +1,5 @@
-function makeGETRequest(url, callback) {
-  var xhr;
-
-  if (window.XMLHttpRequest) {
-    xhr = new XMLHttpRequest();
-  } else if (window.ActiveXObject) {
-    xhr = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      callback(xhr.responseText);
-    }
-  }
-
-  xhr.open('GET', url, true);
-  xhr.send();
-}
-const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
-
 class GoodsItem {
-  constructor(id, title, price, image, description) {
+  constructor(id, title, price, image, description = 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery') {
     this.id = id;
     this.title = title;
     this.price = price;
@@ -44,8 +24,8 @@ class GoodsList {
   }
   fetchGoods() {
     this.goods = [
-      { title: 'Рюкзак', price: 1500, image: './img/first.jpg', description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery' },
-      { title: 'Туфли', price: 50000, image: './img/sec.jpg', description: 'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery' },
+      { title: 'Рюкзак', price: 1500, image: './img/first.jpg' },
+      { title: 'Туфли', price: 50000, image: './img/sec.jpg' },
       { title: 'Панама', price: 3500, image: './img/third.jpg' },
       { title: 'Брюки', price: 7500, image: './img/fourth.jpg' },
       { title: 'Пиджак', price: 6500, image: './img/fifth.jpg' },
@@ -53,12 +33,11 @@ class GoodsList {
     ];
   }
   render() {
-    let listHtml = '';
+    let listHtml = document.querySelector('.featured__list');
     this.goods.forEach(good => {
       const goodItem = new GoodsItem(good.title, good.price, good.image, good.description);
-      listHtml += goodItem.render();
+      listHtml.insertAdjacentHTML('beforeend', goodItem.render());
     });
-    document.querySelector('.featured__list').innerHTML = listHtml;
   }
   sumCart() {
     let calcSum = this.goods.reduce(function (prev, curr) {
@@ -80,12 +59,12 @@ class CartGoodsItem extends GoodsItem {
   }
   render() {
     return `<ul class="cart-cards__list">
-    <h3 class="title-cart">MANGO  PEOPLE  T-SHIRT</h3>
-    <li>${this.price}</li>
-    <li>${this.color}</li>
-    <li>${this.size}</li>
-    <li>quantity</li>
-</ul>`;
+      <h3 class="title-cart">MANGO  PEOPLE  T-SHIRT</h3>
+      <li>${this.price}</li>
+      <li>${this.color}</li>
+      <li>${this.size}</li>
+      <li>quantity</li>
+  </ul>`;
   }
 
 }

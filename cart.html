@@ -17,9 +17,12 @@
                     <div class="header__wrapper_logo">
                         <a href="index.html"><img class="logo-img" src="./img/logo.svg" alt="logo" width="44"
                                 height="38"></a>
-                        <label class="search-label visualy-hidden" for="search"></label>
-                        <input type="search" class="search" placeholder="Поиск" id="search">
-                        <img src="./img/loupe.svg" alt="лупа" width="27" height="28">
+                                <form action="#" class="search-form">
+                                    <input type="search" class="search-field" placeholder="Поиск" id="search">
+                                    <button class="btn-search" type="search">
+                                        <img src="./img/loupe.svg" alt="лупа" width="27" height="28">
+                                    </button>
+                                </form>
                     </div>
                     <ul class="header__list">
                         <button type="button" class="header__list_button" id="menu_burger">
@@ -83,22 +86,17 @@
             </header>
             <div class="container main">
                 <div class="order">
-                    <div class="cart-cards">
-                        <div class="cart-cards__wide">
-                            <img src="./img/first.jpg" class="cart-cards__wide_img" width="262" height="306"></img>
-                            
-                        </div>
-                        <div class="cart-cards__wide">
-                            <img src="./img/walkman.jpg" class="cart-cards__wide_img" width="262" height="306"></img>
-        
-                        </div>
+                     <div class="cart-cards invisible">
+                       <!-- <div class="cart-cards__wide">
+                            <ul class="cart-cards__list"></ul> 
+                        </div> -->
                     </div>
                     <div class="supply">
                             <h3 class="supply__heading"></h3>
                             <input type="text" name="Город" id="town">
                             <input type="text" name="Район" id="district">
                             <input type="number" name="Дом" id="home">
-                            <button type="submit"></button>
+                            <button class="order-btn" type="submit"></button>
                     </div>
                 </div>
             </div>
@@ -158,7 +156,7 @@
                     </div>
             </section>
         </footer>
-        <script src="script_2.js"></script>
+        <script src="/js/script_4.js"></script>
     
 </body>
 
